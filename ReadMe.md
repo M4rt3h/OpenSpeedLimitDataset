@@ -18,21 +18,16 @@ Les dossiers ou identifiants de classes sont structurés selon la correspondance
 - `7` : 80 km/h  
 - `8` : 90 km/h  
 
-## Cas d'utilisation
-- Détection de panneaux de vitesse et classification d'images.
-- Entraînement de modèles de vision (YOLO, RT-DETR, etc.).
-- Expériences en conduite autonome et tests dans CARLA (mon cas d'utilisation).
+## Préparation des données (`convert.py`)
+Script Python (basé sur `pathlib` et `Pillow`) pour homogénéiser les sources du dataset avant annotation ou entraînement :
+- Conversion automatique des images (`.jpg`, `.jpeg`, `.ppm`) en `.png`.
+- Renommage séquentiel et sans conflit garantissant une structure propre et reproductible dans chaque dossier.
 
 ## Sources
 - [Traffic Signs Dataset](https://www.kaggle.com/datasets/tuanai/traffic-signs-dataset)
 - [GTSRB (Roboflow Universe)](https://universe.roboflow.com/gtsrbanno/traffic-sign-detection-gtsrb)
 - [CARLA Traffic Signs Images](https://www.kaggle.com/datasets/sachsene/carla-traffic-signs-images)
 - [Mapillary](https://www.mapillary.com/) (collecte manuelle complémentaire)
-
-## Préparation des données (`convert.py`)
-Script Python (basé sur `pathlib` et `Pillow`) pour homogénéiser les sources du dataset avant annotation ou entraînement :
-- Conversion automatique des images (`.jpg`, `.jpeg`, `.ppm`) en `.png`.
-- Renommage séquentiel et sans conflit garantissant une structure propre et reproductible dans chaque dossier.
 
 ## Licence et crédits
 Les données proviennent de sources externes. Chaque jeu de données reste la propriété de ses auteurs respectifs, dont les licences d'origine doivent être respectées.
